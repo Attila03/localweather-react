@@ -39,6 +39,8 @@ class Tab extends Component {
       return tabChild.type.name === 'tabitem'
     })
 
+    console.log(tabItems, 'tabItems')
+
     contentItems  = this.props.children.filter(tabChild => {
       return tabChild.type.name === 'tabcontent'
     })
@@ -46,6 +48,8 @@ class Tab extends Component {
     finalContent = contentItems.filter(contentItem => {
       return contentItem.props.tabname === this.state.activeTabName;
     })
+
+    console.log(finalContent, 'finlaContent')
 
     // console.log(contentItems, 'contentItems')
 
