@@ -135,16 +135,16 @@ class Weather extends Component {
 
     console.log(this.props)
 
-    return (
-
-      <WeatherContainer>
-          <Tab activeTabName='today'>
-            <TabItem tabname='today'>Today</TabItem>
-            <TabItem tabname='weekly'>Over The Week</TabItem>
-            <TabContent tabname='today'>{todayTabContent}</TabContent>
-            <TabContent tabname='weekly'>{WeekTabContent}</TabContent>
-          </Tab>
-      </WeatherContainer>
+    return (  
+      <h1>HELLO</h1>
+      // <WeatherContainer>
+      //     <Tab activeTabName='today'>
+      //       <TabItem tabname='today'>Today</TabItem>
+      //       <TabItem tabname='weekly'>Over The Week</TabItem>
+      //       <TabContent tabname='today'>{todayTabContent}</TabContent>
+      //       <TabContent tabname='weekly'>{WeekTabContent}</TabContent>
+      //     </Tab>
+      // </WeatherContainer>
     )
   }
   
