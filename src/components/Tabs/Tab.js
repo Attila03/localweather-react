@@ -26,7 +26,7 @@ class Tab extends Component {
 
   render () {
 
-    console.log(this.props)
+    console.log(this.props, 'props')
 
     let tabItems = null;
     let contentItems = null;
@@ -35,7 +35,7 @@ class Tab extends Component {
 
 
     tabItems = this.props.children.filter(tabChild => {
-      // console.log(tabChild)
+      console.log(tabChild, 'tabChild');
       return tabChild.type.name === 'tabitem'
     })
 
