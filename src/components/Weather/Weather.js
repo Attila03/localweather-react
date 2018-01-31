@@ -139,12 +139,12 @@ class Weather extends Component {
       <WeatherContainer>
         <h1>HELLO</h1>
         
-        {/* <Tab activeTabName='today'>
+        <Tab activeTabName='today'>
           <TabItem tabname='today'>Today</TabItem>
           <TabItem tabname='weekly'>Over The Week</TabItem>
-          <TabContent tabname='today'>{todayTabContent}</TabContent>
-          <TabContent tabname='weekly'>{WeekTabContent}</TabContent>
-        </Tab> */}
+          {/* <TabContent tabname='today'>{todayTabContent}</TabContent>
+          <TabContent tabname='weekly'>{WeekTabContent}</TabContent> */}
+        </Tab>
       </WeatherContainer>
     )
   }
