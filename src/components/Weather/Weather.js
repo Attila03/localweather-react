@@ -68,8 +68,6 @@ class Weather extends Component {
     let todayTabContent = null;
     let WeekTabContent = null;
 
-    let temperature = null
-
     if (this.props.weatherData){
 
       let currentTime = new Date(this.props.weatherData.currently.time*1000)
