@@ -39,6 +39,8 @@ class Tab extends Component {
       return contentItem.props.tabname === this.state.activeTabName;
     })
 
+    console.log(contentItems, 'contentItems')
+
     const itemsLength = tabItems.length;
     const finalTabItems = tabItems.map((tabItem, index) => {
       return <TabItem 

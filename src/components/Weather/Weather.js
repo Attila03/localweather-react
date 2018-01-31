@@ -140,10 +140,10 @@ class Weather extends Component {
         <h1>HENLO</h1>
         
         <Tab activeTabName='today'>
-          {/* <TabItem tabname='today'>Today</TabItem>
-          <TabItem tabname='weekly'>Over The Week</TabItem> */}
-          {/* <TabContent tabname='today'>{todayTabContent}</TabContent>
-          <TabContent tabname='weekly'>{WeekTabContent}</TabContent> */}
+          <TabItem tabname='today'>Today</TabItem>
+          <TabItem tabname='weekly'>Over The Week</TabItem>
+          <TabContent tabname='today'>{todayTabContent}</TabContent>
+          <TabContent tabname='weekly'>{WeekTabContent}</TabContent>
         </Tab>
       </WeatherContainer>
     )
