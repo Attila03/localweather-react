@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   componentDidMount () {
+
     axios.get('https://freegeoip.net/json/')
       .then(response => {
         let coordinates =  {
@@ -32,9 +33,6 @@ class App extends Component {
         let weatherURL = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/";
         let url =  weatherURL + weatherAPIKey + "/" + coordinates.latitude + "," + coordinates.longitude + "?units=si"
 
-        setTimeout(function() {
-          return 2
-        }, 5000)
         return axios.get(url)
       })
       .then(response => {
@@ -42,6 +40,7 @@ class App extends Component {
         //console.log(response.data); THIS RESPONSE CHANGED COZ OF SPLICE BEING USED IN WEATHER.JS weekContent varaible.WEIRD
         this.setState({weatherData: response.data});
       })
+
   }
  
   render() {
