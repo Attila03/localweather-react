@@ -26,33 +26,44 @@ class Tab extends Component {
 
   render () {
 
-    const tabItems = this.props.children.filter(tabChild => {
-      // console.log(tabChild)
-      return tabChild.type.name === 'tabitem'
-    })
+    let tabItems = null;
+    let contentItems = null;
+    let finalContent = null;
+    let finalTabItems = null
 
-    const contentItems  = this.props.children.filter(tabChild => {
-      return tabChild.type.name === 'tabcontent'
-    })
+    if (this.props) {
 
-    const finalContent = contentItems.filter(contentItem => {
-      return contentItem.props.tabname === this.state.activeTabName;
-    })
+      tabItems = this.props.children.filter(tabChild => {
+        // console.log(tabChild)
+        return tabChild.type.name === 'tabitem'
+      })
+  
+      contentItems  = this.props.children.filter(tabChild => {
+        return tabChild.type.name === 'tabcontent'
+      })
+  
+      finalContent = contentItems.filter(contentItem => {
+        return contentItem.props.tabname === this.state.activeTabName;
+      })
+  
+      console.log(contentItems, 'contentItems')
+  
+      const itemsLength = tabItems.length;
+      finalTabItems = tabItems.map((tabItem, index) => {
+        return <TabItem 
+                itemsLength={itemsLength} 
+                key={tabItem.props.tabname}
+                title={tabItem.props.title} 
+                tabname={tabItem.props.tabname}
+                active={this.state.activeTabName === tabItem.props.tabname}
+                clicked={this.onTabChangeHandler}>
+                  {tabItem.props.children}
+                </TabItem>
+      })
 
-    console.log(contentItems, 'contentItems')
+    }
 
-    const itemsLength = tabItems.length;
-    const finalTabItems = tabItems.map((tabItem, index) => {
-      return <TabItem 
-              itemsLength={itemsLength} 
-              key={tabItem.props.tabname}
-              title={tabItem.props.title} 
-              tabname={tabItem.props.tabname}
-              active={this.state.activeTabName === tabItem.props.tabname}
-              clicked={this.onTabChangeHandler}>
-                {tabItem.props.children}
-              </TabItem>
-    })
+    
 
     return (
       <TabContainer>

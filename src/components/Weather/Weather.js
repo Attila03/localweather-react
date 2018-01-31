@@ -137,8 +137,6 @@ class Weather extends Component {
 
     return (  
       <WeatherContainer>
-        <h1>HENLO</h1>
-        
         <Tab activeTabName='today'>
           <TabItem tabname='today'>Today</TabItem>
           <TabItem tabname='weekly'>Over The Week</TabItem>

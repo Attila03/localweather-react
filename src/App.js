@@ -31,6 +31,10 @@ class App extends Component {
         let weatherAPIKey = "a85838678a70f528a5a7e69c73908506"
         let weatherURL = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/";
         let url =  weatherURL + weatherAPIKey + "/" + coordinates.latitude + "," + coordinates.longitude + "?units=si"
+
+        setTimeout(function() {
+          return 2
+        }, 5000)
         return axios.get(url)
       })
       .then(response => {
