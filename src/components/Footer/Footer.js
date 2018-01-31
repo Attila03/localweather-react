@@ -21,7 +21,7 @@ const StyledFooter = styled.div`
 const footer =  (props) => {
   return (
     <StyledFooter>
-      <a href='https://darksky.net/poweredby/' target='_blank'>Powered By Dark Sky</a>
+      <a href='https://darksky.net/poweredby/' target='_blank' rel="noopener noreferrer">Powered By Dark Sky</a>
     </StyledFooter>
   )
 }
