@@ -133,8 +133,6 @@ class Weather extends Component {
 
     }
 
-    console.log(this.props)
-
     return (  
       <WeatherContainer>
         <Tab activeTabName='today'>

@@ -26,8 +26,6 @@ class Tab extends Component {
 
   render () {
 
-    console.log(this.props, 'props')
-
     let tabItems = null;
     let contentItems = null;
     let finalContent = null;
@@ -35,11 +33,9 @@ class Tab extends Component {
 
 
     tabItems = this.props.children.filter(tabChild => {
-      console.log(tabChild, 'tabChild');
       return tabChild.type.displayName === 'tabitem'
     })
 
-    console.log(tabItems, 'tabItems')
 
     contentItems  = this.props.children.filter(tabChild => {
       return tabChild.type.displayName === 'tabcontent'
@@ -49,9 +45,6 @@ class Tab extends Component {
       return contentItem.props.tabname === this.state.activeTabName;
     })
 
-    console.log(finalContent, 'finlaContent')
-
-    // console.log(contentItems, 'contentItems')
 
     const itemsLength = tabItems.length;
     finalTabItems = tabItems.map((tabItem, index) => {

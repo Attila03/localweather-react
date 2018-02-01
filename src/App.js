@@ -36,8 +36,8 @@ class App extends Component {
         return axios.get(url)
       })
       .then(response => {
-        // console.log("response", response)
-        //console.log(response.data); THIS RESPONSE CHANGED COZ OF SPLICE BEING USED IN WEATHER.JS weekContent varaible.WEIRD
+        // THIS RESPONSE CHANGED COZ OF SPLICE BEING USED IN WEATHER.JS weekContent varaible.WEIRD
+        //console.log(response.data); 
         this.setState({weatherData: response.data});
       })
 
@@ -45,7 +45,6 @@ class App extends Component {
  
   render() {
     
-    // console.log("state",  this.state)
     return (
       <AppContainer background={this.state.weatherData ? imageUrl[this.state.weatherData.currently.icon] : imageUrl['wind']}>
         <Header></Header>
