@@ -36,13 +36,13 @@ class Tab extends Component {
 
     tabItems = this.props.children.filter(tabChild => {
       console.log(tabChild, 'tabChild');
-      return tabChild.type.name === 'tabitem'
+      return tabChild.type.displayName === 'tabitem'
     })
 
     console.log(tabItems, 'tabItems')
 
     contentItems  = this.props.children.filter(tabChild => {
-      return tabChild.type.name === 'tabcontent'
+      return tabChild.type.displayName === 'tabcontent'
     })
 
     finalContent = contentItems.filter(contentItem => {

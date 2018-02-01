@@ -8,4 +8,6 @@ const tabcontent = props => {
   return props.children
 }
 
+tabcontent.displayName = 'tabcontent';
+
 export default tabcontent;

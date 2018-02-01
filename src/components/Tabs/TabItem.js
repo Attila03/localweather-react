@@ -31,4 +31,6 @@ const tabitem = props => {
   )
 }
 
+tabitem.displayName = 'tabitem'
+
 export default tabitem;
